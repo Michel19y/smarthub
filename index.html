@@ -4,27 +4,105 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Floriani Assistência</title>
-  <link rel="stylesheet" href="style.css" />
+
+  <link rel="icon" type="image/jpeg" href="assets/img/icon.jpeg">
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-o8CvMZT2Px+jHuQ1PLOeBhcIokY8b9F8YQdJm2H3CKkDmgP1ey/utXH0iTqWPrqA/Z6SZX1hzN9p9cYzS5x5mQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
 </head>
+
 <body>
   <header>
     <h1>FLORIANI Assistência Técnica</h1>
     <p>Conserto de celulares, troca de telas e baterias.</p>
+     <section class="bio">
+    <h2>Sobre a Floriani Assistência</h2>
+  <section class="brands-section">
+    <h3>Marcas que cuidamos com carinho 💙</h3>
+    <p>Trabalhamos com as principais fabricantes do mercado — cada aparelho tratado como se fosse o nosso.</p>
+
+    <div class="brands">
+      <div class="brand lg">
+        <img src="assets/img/logos/lg.png" alt="LG">
+        <span>LG</span>
+      </div>
+
+      <div class="brand xiaomi">
+        <img src="assets/img/logos/xiaomi.jpeg" alt="Xiaomi">
+        <span>Xiaomi</span>
+      </div>
+
+      <div class="brand apple">
+        <img src="assets/img/logos/apple.png" alt="Apple">
+        <span>Apple</span>
+      </div>
+
+      <div class="brand motorola">
+        <img src="assets/img/logos/motorola.jpeg" alt="Motorola">
+        <span>Motorola</span>
+      </div>
+
+      <div class="brand infinix">
+        <img src="assets/img/logos/infinix.jpeg" alt="Infinix">
+        <span>Infinix</span>
+      </div>
+
+      <div class="brand samsung">
+        <img src="assets/img/logos/sansumg.png" alt="Samsung">
+        <span>Samsung</span>
+      </div>
+    </div>
+  </section>
+    <p>
+      📱 Sabemos o quanto seu celular é essencial — ele guarda suas conexões, seus planos e até seus momentos mais importantes.  
+      Por isso, cada reparo é feito com o mesmo cuidado que teríamos com o nosso próprio aparelho.  
+    </p>
+
+    <p>
+      ⚙️ Especializados em trocas de tela, bateria e conectores, trabalhamos apenas com **peças de qualidade premium** e um processo técnico rigoroso — porque consertar é mais do que reparar: é devolver tranquilidade e confiança.
+    </p>
+
+    <p>
+      💬 Orçamento gratuito, resposta rápida e total transparência.  
+      Aqui, você sempre sabe o que está sendo feito — **sem surpresas, só soluções.**
+    </p>
+
+    <p>
+      🛠️ Com mais de <strong>2.000 serviços realizados</strong> e garantia de até <strong>6 meses</strong>, nossa missão é simples: fazer você voltar à sua rotina com segurança, qualidade e sem estresse.
+    </p>
+  </section>
+
   </header>
+
+
+ 
+
 
   <main>
     <a 
-      href="https://wa.me/554999037441?text=Faça%20seu%20orçamento%20sem%20compromisso!%20Arrumamos%20na%20sua%20casa%20!!!" 
-      class="btn"
+      href="https://wa.me/5549989037441?text=Olá!%20Quero%20fazer%20um%20orçamento%20sem%20compromisso.%20Vocês%20fazem%20atendimento%20em%20casa%3F" 
+      class="btn whatsapp"
+      target="_blank"
     >
-      💬 Fale no WhatsApp
+      <img src="assets/img/zap.jpeg" alt="WhatsApp"> Fale no WhatsApp
     </a>
     
     <a 
       href="https://www.instagram.com/florianiassistencia" 
-      class="btn"
+      class="btn instagram"
+      target="_blank"
     >
-      📸 Instagram
+      <img src="assets/img/insta.jpeg" alt="Instagram"> Siga no Instagram
     </a>
   </main>
 
@@ -32,4 +110,19 @@
     <p>© 2025 Floriani Assistência • Todos os direitos reservados.</p>
   </footer>
 </body>
+<script>
+  // Ativa o efeito de fade-in ao rolar a página
+  const brands = document.querySelectorAll('.brand');
+
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  brands.forEach(brand => observer.observe(brand));
+</script>
+
 </html>

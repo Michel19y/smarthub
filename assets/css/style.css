@@ -1,0 +1,181 @@
+/* ---------- RESET GERAL ---------- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+/* ---------- HEADER ---------- */
+header h1 {
+  font-size: 2rem;
+  color: #FF3B3F;
+  margin-bottom: 10px;
+}
+
+header p {
+  color: #ddd;
+  font-size: 1rem;
+  margin-bottom: 25px;
+}
+
+/* ---------- BIO SECTION ---------- */
+.bio {
+  background: #111;
+  border-left: 4px solid #FF8C00;
+  padding: 25px;
+  margin: 20px auto;
+  max-width: 500px;
+  border-radius: 10px;
+  color: #f1f1f1;
+  line-height: 1.7;
+  text-align: left;
+}
+
+/* ---------- BRAND SECTION ---------- */
+.brands-section {
+  margin: 50px auto;
+  max-width: 800px;
+}
+
+.brands {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.brand {
+  background: #111;
+  border-radius: 10px;
+  padding: 15px 20px;
+  text-align: center;
+  width: 110px;
+  transition: 0.3s ease;
+  cursor: pointer;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease, transform 0.8s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.brand.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.brand img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.brand span {
+  display: block;
+  margin-top: 8px;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* ---------- HOVERS PERSONALIZADOS (EFEITO APPLE PADRÃO) ---------- */
+.brand:hover {
+  transform: scale(1.07);
+  color: #fff;
+  box-shadow: 0 0 25px rgba(255, 255, 255, 0.3), 0 0 50px rgba(255, 255, 255, 0.1);
+}
+
+/* LG → Vermelho e preto */
+.brand.lg:hover {
+  background: linear-gradient(135deg, #ff0000, #000000);
+  box-shadow: 0 0 35px rgba(255, 0, 0, 0.7);
+}
+
+/* Xiaomi → Laranja e preto */
+.brand.xiaomi:hover {
+  background: linear-gradient(135deg, #ff6700, #000000);
+  box-shadow: 0 0 35px rgba(255, 103, 0, 0.7);
+}
+
+/* Apple → Preto, cinza e branco */
+.brand.apple:hover {
+  background: linear-gradient(135deg, #000000, #555555, #ffffff);
+  box-shadow: 0 0 35px rgba(255, 255, 255, 0.7);
+}
+
+/* Motorola → Azul e preto */
+.brand.motorola:hover {
+  background: linear-gradient(135deg, #0072ce, #000000);
+  box-shadow: 0 0 35px rgba(0, 114, 206, 0.7);
+}
+
+/* Infinix → Verde e preto */
+.brand.infinix:hover {
+  background: linear-gradient(135deg, #00c851, #000000);
+  box-shadow: 0 0 35px rgba(0, 200, 81, 0.7);
+}
+
+/* Samsung → Azul e branco */
+.brand.samsung:hover {
+  background: linear-gradient(135deg, #007bff, #ffffff);
+  box-shadow: 0 0 35px rgba(0, 123, 255, 0.7);
+}
+
+/* ---------- BOTÕES ---------- */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 40px;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  padding: 12px 25px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  width: 250px;
+}
+
+.btn img {
+  width: 28px;
+  height: auto;
+}
+
+.btn.whatsapp {
+  background-color: #25D366;
+}
+
+.btn.whatsapp:hover {
+  background-color: #1EBE57;
+  transform: scale(1.05);
+}
+
+.btn.instagram {
+  background: linear-gradient(45deg, #ff0069, #ff8c00);
+}
+
+.btn.instagram:hover {
+  transform: scale(1.05);
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  margin-top: 50px;
+  font-size: 0.9rem;
+  color: #888;
+}
+
