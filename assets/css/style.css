@@ -432,7 +432,7 @@ a { text-decoration: none; }
 
 .marquee-track {
   display: flex;
-  animation: marquee 24s linear infinite;
+  will-change: transform;
 }
 
 .marquee-group {
