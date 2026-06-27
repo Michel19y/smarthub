@@ -414,14 +414,39 @@ a { text-decoration: none; }
   background: var(--surface);
 }
 
-.marquee-label {
-  text-align: center;
-  font-size: 0.7rem;
+.rotating-badge {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 1.5rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rotating-badge-svg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  animation: spin 18s linear infinite;
+}
+
+.rotating-badge-svg text {
+  fill: var(--muted);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 10.5px;
   font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin-bottom: 1.25rem;
+  letter-spacing: 3px;
+}
+
+.rotating-badge-center {
+  position: relative;
+  z-index: 1;
+  font-size: 1.5rem;
+  color: var(--indigo);
+  line-height: 1;
+  filter: drop-shadow(0 0 8px var(--indigo));
 }
 
 .marquee-viewport {
@@ -436,6 +461,11 @@ a { text-decoration: none; }
   gap: 2rem;
   width: max-content;
   animation: marquee 28s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
 @keyframes marquee {
@@ -944,7 +974,8 @@ a { text-decoration: none; }
   .badge-dot    { animation: none; }
   .phone-wrap   { animation: none; }
   .hero::before { animation: none; }
-  .marquee-track { animation-play-state: paused; }
+  .marquee-track       { animation-play-state: paused; }
+  .rotating-badge-svg  { animation: none; }
   .reveal.revealed { animation: none; opacity: 1; }
   .btn-primary, .btn-ghost, .btn-outline, .nav-cta { transition: none; }
 }

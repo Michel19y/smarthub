@@ -87,7 +87,19 @@
 
   <!-- ── MARQUEE ───────────────────────────────────────────── -->
   <div class="marquee-section">
-    <p class="marquee-label">Trabalhamos com as principais marcas</p>
+    <div class="rotating-badge">
+      <svg class="rotating-badge-svg" viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <defs>
+          <path id="badgeCircle" d="M80,80 m-62,0 a62,62 0 1,1 124,0 a62,62 0 1,1-124,0"/>
+        </defs>
+        <text>
+          <textPath href="#badgeCircle" startOffset="0%">
+            TRABALHAMOS COM AS PRINCIPAIS MARCAS ✦ TRABALHAMOS COM AS PRINCIPAIS MARCAS ✦
+          </textPath>
+        </text>
+      </svg>
+      <span class="rotating-badge-center" aria-label="Trabalhamos com as principais marcas">✦</span>
+    </div>
     <div class="marquee-viewport" aria-label="Marcas atendidas">
       <div class="marquee-track">
         <div class="brand-pill"><div class="brand-img-wrap"><img src="assets/img/logos/apple.png" alt="Apple"></div><span>Apple</span></div>
