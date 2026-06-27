@@ -432,7 +432,6 @@ a { text-decoration: none; }
 
 .marquee-track {
   display: flex;
-  width: max-content;
   animation: marquee 24s linear infinite;
 }
 
@@ -440,7 +439,9 @@ a { text-decoration: none; }
   display: flex;
   align-items: center;
   gap: 1.25rem;
-  padding-right: 1.25rem; /* iguala o gap do último item */
+  padding-right: 1.25rem;
+  flex-shrink: 0;
+  min-width: max-content;
 }
 
 @keyframes spin {
