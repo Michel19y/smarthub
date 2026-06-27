@@ -431,16 +431,13 @@ a { text-decoration: none; }
 .marquee-track {
   display: flex;
   width: max-content;
-  will-change: transform;
+  align-items: center;
+  animation: marquee-scroll 22s linear infinite;
 }
 
-.marquee-group {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
-  padding-right: 1.25rem;
+.marquee-track .brand-pill {
+  margin-right: 1.25rem;
   flex-shrink: 0;
-  min-width: max-content;
 }
 
 @keyframes spin {
@@ -448,7 +445,7 @@ a { text-decoration: none; }
   to   { transform: rotate(360deg); }
 }
 
-@keyframes marquee {
+@keyframes marquee-scroll {
   from { transform: translateX(0); }
   to   { transform: translateX(-50%); }
 }
@@ -954,7 +951,7 @@ a { text-decoration: none; }
   .badge-dot    { animation: none; }
   .phone-wrap   { animation: none; }
   .hero::before { animation: none; }
-  .marquee-track { animation-play-state: paused; }
+  .marquee-track { animation: none; }
   .reveal.revealed { animation: none; opacity: 1; }
   .btn-primary, .btn-ghost, .btn-outline, .nav-cta { transition: none; }
 }

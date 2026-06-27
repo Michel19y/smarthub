@@ -90,24 +90,18 @@
     <p class="marquee-label">Trabalhamos com as principais marcas</p>
     <div class="marquee-viewport" aria-label="Marcas atendidas">
       <div class="marquee-track">
-        <!-- grupo 1 -->
-        <div class="marquee-group">
-          <div class="brand-pill"><div class="brand-img-wrap"><img src="assets/img/logos/apple.png" alt="Apple"></div><span>Apple</span></div>
-          <div class="brand-pill"><div class="brand-img-wrap"><img src="assets/img/logos/sansumg.png" alt="Samsung"></div><span>Samsung</span></div>
-          <div class="brand-pill"><div class="brand-img-wrap"><img src="assets/img/logos/xiaomi.jpeg" alt="Xiaomi"></div><span>Xiaomi</span></div>
-          <div class="brand-pill"><div class="brand-img-wrap"><img src="assets/img/logos/motorola.jpeg" alt="Motorola"></div><span>Motorola</span></div>
-          <div class="brand-pill"><div class="brand-img-wrap"><img src="assets/img/logos/lg.png" alt="LG"></div><span>LG</span></div>
-          <div class="brand-pill"><div class="brand-img-wrap"><img src="assets/img/logos/infinix.jpeg" alt="Infinix"></div><span>Infinix</span></div>
-        </div>
-        <!-- grupo 2 — cópia para loop contínuo -->
-        <div class="marquee-group" aria-hidden="true">
-          <div class="brand-pill"><div class="brand-img-wrap"><img src="assets/img/logos/apple.png" alt=""></div><span>Apple</span></div>
-          <div class="brand-pill"><div class="brand-img-wrap"><img src="assets/img/logos/sansumg.png" alt=""></div><span>Samsung</span></div>
-          <div class="brand-pill"><div class="brand-img-wrap"><img src="assets/img/logos/xiaomi.jpeg" alt=""></div><span>Xiaomi</span></div>
-          <div class="brand-pill"><div class="brand-img-wrap"><img src="assets/img/logos/motorola.jpeg" alt=""></div><span>Motorola</span></div>
-          <div class="brand-pill"><div class="brand-img-wrap"><img src="assets/img/logos/lg.png" alt=""></div><span>LG</span></div>
-          <div class="brand-pill"><div class="brand-img-wrap"><img src="assets/img/logos/infinix.jpeg" alt=""></div><span>Infinix</span></div>
-        </div>
+        <div class="brand-pill"><div class="brand-img-wrap"><img src="assets/img/logos/apple.png" alt="Apple"></div><span>Apple</span></div>
+        <div class="brand-pill"><div class="brand-img-wrap"><img src="assets/img/logos/sansumg.png" alt="Samsung"></div><span>Samsung</span></div>
+        <div class="brand-pill"><div class="brand-img-wrap"><img src="assets/img/logos/xiaomi.jpeg" alt="Xiaomi"></div><span>Xiaomi</span></div>
+        <div class="brand-pill"><div class="brand-img-wrap"><img src="assets/img/logos/motorola.jpeg" alt="Motorola"></div><span>Motorola</span></div>
+        <div class="brand-pill"><div class="brand-img-wrap"><img src="assets/img/logos/lg.png" alt="LG"></div><span>LG</span></div>
+        <div class="brand-pill"><div class="brand-img-wrap"><img src="assets/img/logos/infinix.jpeg" alt="Infinix"></div><span>Infinix</span></div>
+        <div class="brand-pill" aria-hidden="true"><div class="brand-img-wrap"><img src="assets/img/logos/apple.png" alt=""></div><span>Apple</span></div>
+        <div class="brand-pill" aria-hidden="true"><div class="brand-img-wrap"><img src="assets/img/logos/sansumg.png" alt=""></div><span>Samsung</span></div>
+        <div class="brand-pill" aria-hidden="true"><div class="brand-img-wrap"><img src="assets/img/logos/xiaomi.jpeg" alt=""></div><span>Xiaomi</span></div>
+        <div class="brand-pill" aria-hidden="true"><div class="brand-img-wrap"><img src="assets/img/logos/motorola.jpeg" alt=""></div><span>Motorola</span></div>
+        <div class="brand-pill" aria-hidden="true"><div class="brand-img-wrap"><img src="assets/img/logos/lg.png" alt=""></div><span>LG</span></div>
+        <div class="brand-pill" aria-hidden="true"><div class="brand-img-wrap"><img src="assets/img/logos/infinix.jpeg" alt=""></div><span>Infinix</span></div>
       </div>
     </div>
   </div>
@@ -277,23 +271,6 @@
   </footer>
 
   <script>
-    /* ── Marquee horizontal ── */
-    function startMarquee() {
-      var track = document.querySelector('.marquee-track');
-      if (!track) return;
-      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      var group = track.children[0];
-      var groupW = group ? group.offsetWidth : 0;
-      if (!groupW) { setTimeout(startMarquee, 120); return; }
-      var x = 0;
-      (function step() {
-        x -= 0.6;
-        if (x <= -groupW) x += groupW;
-        track.style.transform = 'translateX(' + x + 'px)';
-        requestAnimationFrame(step);
-      })();
-    }
-    window.addEventListener('load', startMarquee);
 
     /* ── Mouse spotlight in hero ── */
     const hero = document.querySelector('.hero');
