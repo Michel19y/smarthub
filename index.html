@@ -278,20 +278,22 @@
 
   <script>
     /* ── Marquee horizontal ── */
-    window.addEventListener('load', function () {
-      const track = document.querySelector('.marquee-track');
+    function startMarquee() {
+      var track = document.querySelector('.marquee-track');
       if (!track) return;
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      var groupW = track.children[0].offsetWidth;
-      if (!groupW) return;
+      var group = track.children[0];
+      var groupW = group ? group.offsetWidth : 0;
+      if (!groupW) { setTimeout(startMarquee, 120); return; }
       var x = 0;
       (function step() {
         x -= 0.6;
-        if (x <= -groupW) x = 0;
+        if (x <= -groupW) x += groupW;
         track.style.transform = 'translateX(' + x + 'px)';
         requestAnimationFrame(step);
       })();
-    });
+    }
+    window.addEventListener('load', startMarquee);
 
     /* ── Mouse spotlight in hero ── */
     const hero = document.querySelector('.hero');

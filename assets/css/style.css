@@ -430,6 +430,7 @@ a { text-decoration: none; }
 
 .marquee-track {
   display: flex;
+  width: max-content;
   will-change: transform;
 }
 
