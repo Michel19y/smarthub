@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <rect width="32" height="32" rx="7" fill="#6366F1"/>
+  <!-- Phone body -->
+  <rect x="9" y="4" width="12" height="22" rx="2.8" fill="white"/>
+  <!-- Screen area -->
+  <rect x="11" y="7.5" width="8" height="13" rx="1.5" fill="#6366F1" opacity=".18"/>
+  <!-- Home dot -->
+  <circle cx="15" cy="23" r="1.1" fill="#6366F1"/>
+  <!-- Wrench -->
+  <g transform="translate(17,3) rotate(45)">
+    <rect x="-1.2" y="0" width="2.4" height="7" rx="1.2" fill="#FBBF24"/>
+    <rect x="-1.2" y="0" width="2.4" height="2.8" rx="1.2" fill="#F59E0B"/>
+  </g>
+</svg>
