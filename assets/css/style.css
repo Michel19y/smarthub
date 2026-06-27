@@ -426,8 +426,6 @@ a { text-decoration: none; }
 
 .marquee-viewport {
   overflow: hidden;
-  -webkit-mask: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
-  mask: linear-gradient(to right, transparent, black 10%, black 90%, transparent);
 }
 
 .marquee-track {

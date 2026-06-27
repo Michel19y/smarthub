@@ -278,20 +278,20 @@
 
   <script>
     /* ── Marquee horizontal ── */
-    (function () {
+    window.addEventListener('load', function () {
       const track = document.querySelector('.marquee-track');
       if (!track) return;
       if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-      const group = track.children[0];
-      let x = 0;
-      function step() {
+      var groupW = track.children[0].offsetWidth;
+      if (!groupW) return;
+      var x = 0;
+      (function step() {
         x -= 0.6;
-        if (x <= -group.offsetWidth) x = 0;
+        if (x <= -groupW) x = 0;
         track.style.transform = 'translateX(' + x + 'px)';
         requestAnimationFrame(step);
-      }
-      step();
-    })();
+      })();
+    });
 
     /* ── Mouse spotlight in hero ── */
     const hero = document.querySelector('.hero');
